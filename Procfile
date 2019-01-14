@@ -1,0 +1,1 @@
+web: gunicorn loinc_json_api:app
