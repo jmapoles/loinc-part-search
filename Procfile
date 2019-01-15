@@ -1,1 +1,1 @@
-web: gunicorn loinc_json_flask:app
+web: gunicorn loinc_part_search.loinc_part_api.loinc_json_flask:app
