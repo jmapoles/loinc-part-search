@@ -1,1 +1,1 @@
-web: gunicorn loinc_json_api:app
+web: gunicorn loinc_json_flask.py
