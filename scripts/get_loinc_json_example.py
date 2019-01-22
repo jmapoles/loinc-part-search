@@ -7,7 +7,7 @@ from requests.exceptions import RequestException
 #
 #######################################################
 
-resp = requests.get( 'http://127.0.0.1:5000/loinc/17811-1' )
+resp = requests.get( 'https://loinc-part-search-demo.herokuapp.com/loinc/10524-7' )
 if resp.status_code != 200:
     # Something went wrong.
     raise RequestException( resp.status_code )

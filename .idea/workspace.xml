@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="986ef1ee-3610-4de7-b162-cb7df408f17a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database_setup/cytology.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database_setup/descendants.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jmap2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/jmap2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_setup/cytology.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_setup/HLA.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py" beforeDir="false" afterPath="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/get_loinc_json_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/get_loinc_json_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,38 +19,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="215">
+                <caret line="12" column="50" lean-forward="true" selection-end-line="316" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py">
+        <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loinc_part_search/db_data/access_loinc_connection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loinc_part_search/database_connection/db_queries.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loinc_part_search/db_data/access_loinc.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="686">
+              <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+              <folding>
+                <element signature="e#1102#1106#0" expanded="true" />
+                <element signature="e#1110#1114#0" expanded="true" />
+                <element signature="e#1186#1190#0" expanded="true" />
+                <element signature="e#1194#1198#0" expanded="true" />
+                <element signature="e#1277#1281#0" expanded="true" />
+                <element signature="e#1285#1289#0" expanded="true" />
+                <element signature="e#1367#1371#0" expanded="true" />
+                <element signature="e#1375#1379#0" expanded="true" />
+                <element signature="e#1453#1457#0" expanded="true" />
+                <element signature="e#1461#1465#0" expanded="true" />
+                <element signature="e#1529#1533#0" expanded="true" />
+                <element signature="e#1537#1541#0" expanded="true" />
+                <element signature="e#1563#1567#0" expanded="true" />
+                <element signature="e#1571#1575#0" expanded="true" />
+                <element signature="e#1809#1813#0" expanded="true" />
+                <element signature="e#1861#1865#0" expanded="true" />
+                <element signature="e#2757#2761#0" expanded="true" />
+                <element signature="e#2765#2769#0" expanded="true" />
+                <element signature="e#3691#3695#0" expanded="true" />
+                <element signature="e#3699#3703#0" expanded="true" />
+                <element signature="e#5751#5755#0" expanded="true" />
+                <element signature="e#5759#5763#0" expanded="true" />
+                <element signature="e#8258#8262#0" expanded="true" />
+                <element signature="e#8266#8270#0" expanded="true" />
+                <element signature="e#9229#9233#0" expanded="true" />
+                <element signature="e#9237#9241#0" expanded="true" />
+                <element signature="e#10125#10129#0" expanded="true" />
+                <element signature="e#10133#10137#0" expanded="true" />
+                <element signature="e#10349#10353#0" expanded="true" />
+                <element signature="e#10362#10366#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,6 +90,7 @@
       <find>mysql</find>
       <find>pymysql</find>
       <find>autocommit</find>
+      <find>JANN</find>
     </findStrings>
     <replaceStrings>
       <replace>conn</replace>
@@ -125,11 +147,14 @@
         <option value="$PROJECT_DIR$/database_setup/loincCodesSetUp_Postgres.sql" />
         <option value="$PROJECT_DIR$/database_setup/load_loinc_mysql.py" />
         <option value="$PROJECT_DIR$/database_setup/table_counts.sql" />
-        <option value="$PROJECT_DIR$/scripts/get_loinc_json_example.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/database_setup/cytology.sql" />
         <option value="$PROJECT_DIR$/database_setup/descendants.sql" />
+        <option value="$PROJECT_DIR$/scripts/get_loinc_json_example.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/database_setup/HLA.sql" />
         <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py" />
+        <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html" />
       </list>
     </option>
   </component>
@@ -160,6 +185,11 @@
             <path>
               <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
               <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
               <item name="loinc_part_search" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -167,6 +197,13 @@
               <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
               <item name="loinc_part_search" type="462c0819:PsiDirectoryNode" />
               <item name="loinc_part_api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
+              <item name="loinc_part_search" type="462c0819:PsiDirectoryNode" />
+              <item name="loinc_part_api" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
@@ -186,17 +223,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Development\Projects\LOINCPartSearch\database_setup" />
-      <recent name="C:\Development\Projects\LOINCPartSearch\scripts" />
-      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search" />
-      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search\loinc_objects" />
-      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search\loinc_part_api" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search\database_queries" />
       <recent name="C:\Development\Projects\LOINCPartSearch\database_setup" />
       <recent name="C:\Development\Projects\LOINCPartSearch" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Development\Projects\LOINCPartSearch" />
+      <recent name="C:\Development\Projects\LOINCPartSearch\database_setup" />
+      <recent name="C:\Development\Projects\LOINCPartSearch\scripts" />
+      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search" />
+      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search\loinc_objects" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -211,7 +248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.get_loinc_json_example">
+  <component name="RunManager" selected="Python.loinc_json_flask">
     <configuration name="get_loinc_json_example" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LOINCPartSearch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -388,20 +425,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16192994" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22405817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.14305949" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25212464" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2407932" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.562323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.5028329" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.23654391" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.23796034" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.04674221" />
@@ -415,25 +451,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add gunicorn and Procfile" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/doc/access_loinc_design.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/db_connection_design.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/eav_object.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/doc/project_tasks.md" />
     <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_objects/loinc_eav_constants.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -510,31 +527,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/db_design.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="52">
-            <caret line="2" column="263" selection-start-line="2" selection-start-column="263" selection-end-line="2" selection-end-column="263" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../LOINCCodeSelection/Documents/eav_object_design.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="127">
             <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/eav_object_design.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="52">
-            <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
           </first_editor>
           <second_editor />
         </state>
@@ -700,16 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loinc_part_search/database_connection/db_connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="25" />
-          <folding>
-            <element signature="e#119#133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database_setup/load_loinc_mysql.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3180">
@@ -741,23 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/get_loinc_json_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database_setup/cytology.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database_setup/descendants.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -772,31 +742,146 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/get_loinc_json_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="80" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/access_loinc_design.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/db_connection_design.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/db_design.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="37">
+            <caret line="2" column="263" selection-start-line="2" selection-start-column="263" selection-end-line="2" selection-end-column="263" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/eav_object_design.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="52">
+            <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database_setup/HLA.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/loinc_part_search/db_data/access_loinc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="30">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loinc_part_search/db_data/access_loinc_connection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        <state relative-caret-position="76">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loinc_part_search/database_connection/db_queries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="84">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loinc_part_search/database_connection/db_connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#119#133#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        <state relative-caret-position="180">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="215">
+            <caret line="12" column="50" lean-forward="true" selection-end-line="316" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+          <folding>
+            <element signature="e#1102#1106#0" expanded="true" />
+            <element signature="e#1110#1114#0" expanded="true" />
+            <element signature="e#1186#1190#0" expanded="true" />
+            <element signature="e#1194#1198#0" expanded="true" />
+            <element signature="e#1277#1281#0" expanded="true" />
+            <element signature="e#1285#1289#0" expanded="true" />
+            <element signature="e#1367#1371#0" expanded="true" />
+            <element signature="e#1375#1379#0" expanded="true" />
+            <element signature="e#1453#1457#0" expanded="true" />
+            <element signature="e#1461#1465#0" expanded="true" />
+            <element signature="e#1529#1533#0" expanded="true" />
+            <element signature="e#1537#1541#0" expanded="true" />
+            <element signature="e#1563#1567#0" expanded="true" />
+            <element signature="e#1571#1575#0" expanded="true" />
+            <element signature="e#1809#1813#0" expanded="true" />
+            <element signature="e#1861#1865#0" expanded="true" />
+            <element signature="e#2757#2761#0" expanded="true" />
+            <element signature="e#2765#2769#0" expanded="true" />
+            <element signature="e#3691#3695#0" expanded="true" />
+            <element signature="e#3699#3703#0" expanded="true" />
+            <element signature="e#5751#5755#0" expanded="true" />
+            <element signature="e#5759#5763#0" expanded="true" />
+            <element signature="e#8258#8262#0" expanded="true" />
+            <element signature="e#8266#8270#0" expanded="true" />
+            <element signature="e#9229#9233#0" expanded="true" />
+            <element signature="e#9237#9241#0" expanded="true" />
+            <element signature="e#10125#10129#0" expanded="true" />
+            <element signature="e#10133#10137#0" expanded="true" />
+            <element signature="e#10349#10353#0" expanded="true" />
+            <element signature="e#10362#10366#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
