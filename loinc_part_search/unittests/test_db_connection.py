@@ -10,7 +10,7 @@ from loinc_part_search.database_connection.db_connection import DBConnection
 # --------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------
 
-class TestMySQLQuery(unittest.TestCase):
+class TestQuery(unittest.TestCase):
 
     # --------------------------------------------------------------------------
 

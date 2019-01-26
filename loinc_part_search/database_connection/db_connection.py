@@ -39,6 +39,7 @@ class DBConnection:
         """
         :return: cursor
 
+        return db cursor
         """
         return self.conn.cursor()
 

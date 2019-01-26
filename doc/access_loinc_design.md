@@ -4,7 +4,7 @@ This is a stack of three classes that use QueryMySQLLOINC to access the LOINC DB
 Returns are LOINC EAV objects. AccessLOINC created using:
 
 ```
-access_loinc = AccessLOINC ( "localhost", "root", "JANN1qwe1!", "loinc" )
+access_loinc = AccessLOINC ( "localhost", "root", "<password>", "loinc" )
 access_loinc.make_connection()
 ```
 

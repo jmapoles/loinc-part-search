@@ -33,7 +33,6 @@ class TestAccessJSON( unittest.TestCase ):
     def test_index( self ):
         rv = self.client.get( '/' )
         self.assertEqual( rv.status_code , 200 )
-        self.assertEqual( rv.data, b'<h1>LOINC Part search</h1>' )
 
     def test_loinc( self ):
         # Mock

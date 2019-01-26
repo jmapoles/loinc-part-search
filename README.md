@@ -1,27 +1,40 @@
 # LOINC Part Search
 
-This is a project to build LOINC hierarchies based on LOINC part codes with searching capabilities.  Hierarchies are base on the multi-axial hierarchy table. Hierarchy support multiple parents for codes. This is a demonstration project. Search not support in this version.
-Data is from LOINC 2.65.  The demonstration database contains only the codes below Human Leukocyte Antigen, LOINC part code: LP56928-2.  This is to stay within the Heroku 10,000 Postgres row limit for demonstration projects.
-The project is configured as rest-API and returns json objects.
+This project builds LOINC codes into a hierarchy based on LOINC part codes.  Hierarchies are base on the multi-axial hierarchy table. This is a demonstration project.  Features will gradually be expanded.  Searching capabilities will be added using part code terms and the LOINC code definitions. Data is from LOINC 2.65. The database contains all data from the loinc.txt and multi-axial hierarchy table.<br>
+The project is designed as a set of layers,
+* database containing loinc data stored in a object–attribute–value model design,
+  * MySQL and Postgres databases are supported,
+* connection layer that connects to the database and queries that database,
+* parsing layer that converts query data into objects.
+* object layer that is used to contain parsed data.<br>
+A small set of rest-api using Flask are available.<br>
+Part of LOINC 2.65 has been configured as a demonstration project.  The database contains only the codes below Human Leukocyte Antigen, LOINC part code: LP56928-2.  This is to stay within the Heroku 10,000 Postgres row limit for a demonstration project.<br><br>
 See https://loinc.org/license/ for Regenstrief license for the use and distribution of LOINC.
 
 
+# Documentation
+1. [eav_object_design](./doc/eav_object_design.md): covers the design of the of data object containing loinc code data.
+2. [db_design](./doc/db_design.md): database table layout.
+3. [access_loinc_design](./doc/access_loinc_design.md):
+4. [db_connection_design](./doc/db_connection_design.md):
+
+
 # API Usage
-### API Base URL: https://loinc-part-search-demo.herokuapp.com/
+## API Base URL: https://loinc-part-search-demo.herokuapp.com/
 
 ## Endpoints Summary
-* [/loinc/&lt;code&gt;](#loinc-code)
-  * /loinc/parents/&lt;code&gt;
-  * /loinc/siblings/&lt;code&gt;
-  * /loinc/cousins/&lt;code&gt;
-  * /loinc/parts/&lt;code&gt;
-    * /loinc/parts/descendants/&lt;code&gt;
-    * /loinc/parts/parents/&lt;code&gt;
+* GET: /loinc/&lt;code&gt;
+  * GET: /loinc/parents/&lt;code&gt;
+  * GET: /loinc/siblings/&lt;code&gt;
+  * GET: /loinc/cousins/&lt;code&gt;
+  * GET: /loinc/parts/&lt;code&gt;
+    * GET: /loinc/parts/descendants/&lt;code&gt;
+    * GET: /loinc/parts/parents/&lt;code&gt;
 
   
 ## Examples
 
-### <a name="#loinc-code">/loinc/&lt;code&gt;</a>
+### GET: /loinc/&lt;code&gt; 
 Returns a json object with the description of this code.  Attributes are as described in the loinc.txt table.<br>
 Example usage: https://loinc-part-search-demo.herokuapp.com/loinc/72323-9<br>
 Example result:
@@ -50,7 +63,7 @@ Example result:
 ```
 
 
-### loinc/parents/&lt;code&gt;
+### GET: loinc/parents/&lt;code&gt;
 Returns a json list of the parents of the LOINC code. The list contains one json for each parent.  Attributes are as described in the multi-axial table.<br>
 Example usage: https://loinc-part-search-demo.herokuapp.com/loinc/parents/72323-9<br>
 Example result:<br>
@@ -313,5 +326,4 @@ Example result:<br>
     ]
 }
 ```
-
 

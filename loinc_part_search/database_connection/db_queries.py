@@ -9,7 +9,7 @@ from typing import Set
 
 class QueryLOINC:
     """
-    Query MySQL database
+    Query database
     """
     # --------------------------------------------------------
 
@@ -20,7 +20,7 @@ class QueryLOINC:
         :param password:
         :param database:
 
-        This creates the MySQL connection, could be expanded
+        This creates DB connection, can be expanded
             to take other connectors
         """
 
@@ -30,13 +30,13 @@ class QueryLOINC:
         self.password = password
         self.database = database
 
-        self.mysql = None
+        self.query_db = None
 
     def create_connection(self):
         """
         connect to MySQLConnection
         """
-        self.mysql = DBConnection(self.type,self.server, self.user_name, self.password, self.database)
+        self.query_db = DBConnection(self.type,self.server, self.user_name, self.password, self.database)
 
 
 
@@ -53,10 +53,10 @@ class QueryLOINC:
 
 
         # get the codes table for the code
-        query = f" select * from codes where definingValue = '{code}' and " \
-                f"   definingId = {attribute_definition} "
+        query = f" select * from codes where defining_value = '{code}' and " \
+                f"   defining_id = {attribute_definition} "
 
-        row = self.mysql.return_single_row( query )
+        row = self.query_db.return_single_row( query )
 
         if row is None:
             return None
@@ -77,7 +77,7 @@ class QueryLOINC:
         # get codes table for the obj_id
         query = f" select * from codes where id = {obj_id} "
 
-        row = self.mysql.return_single_row( query )
+        row = self.query_db.return_single_row( query )
 
         if row is None:
             return False
@@ -91,15 +91,14 @@ class QueryLOINC:
         :param obj_id:
         :return: tuple
 
-        query returns row from code: id , attributeId , attributeValue
-        a list is returned with attributeId and attributeValue
+        query returns tuple from code: defining_id , defining_value
         """
 
 
         # get codes table for the obj_id
         query = f" select * from codes where id = {obj_id} "
 
-        row = self.mysql.return_single_row ( query )
+        row = self.query_db.return_single_row ( query )
         if row is None:
             return None
 
@@ -116,7 +115,7 @@ class QueryLOINC:
 
         # get the returns code_attributes table
         query = f" select * from code_attributes where id = {obj_id} "
-        cursor = self.mysql.get_sql_cursor(query)
+        cursor = self.query_db.get_sql_cursor(query)
 
         attributes = []
         for row in cursor.fetchall():
@@ -133,15 +132,15 @@ class QueryLOINC:
     def get_parent_ids_of_obj_id(self, obj_id) -> Set:
         """
         :param obj_id:
-        :return: set of object ids that are parents of Obj_id
+        :return: set of object ids that are parents of obj_id
 
-        collects the parents of a obj_id and returns their ids as a set
+        collects the parents of a obj_id and returns the ids as a set
         """
 
         parents = set()
 
         query = f" select * from code_hierarchy where id = {obj_id} "
-        cursor = self.mysql.get_sql_cursor(query)
+        cursor = self.query_db.get_sql_cursor(query)
 
         for row in cursor.fetchall():
             parents.add(row[0])
@@ -154,15 +153,15 @@ class QueryLOINC:
     def get_child_ids_of_obj_id(self, obj_id) -> Set:
         """
         :param obj_id:
-        :return: set of object ids that are children of Obj_id
+        :return: set of object ids that are children of obj_id
 
-        collects the children of a obj_id and returns their ids as a set
+        collects the children of a obj_id and returns the ids as a set
         """
 
         children = set()
 
-        query = f" select * from code_hierarchy where parentId = {obj_id} "
-        cursor = self.mysql.get_sql_cursor(query)
+        query = f" select * from code_hierarchy where parent_id = {obj_id} "
+        cursor = self.query_db.get_sql_cursor(query)
 
         for row in cursor.fetchall():
             children.add(row[1])
@@ -188,12 +187,12 @@ class QueryLOINC:
 
         query = ' WITH RECURSIVE cte (id) AS '
         query = query + ' ( '
-        query = query + f' select parentId from code_hierarchy where id = {obj_id} and parentId <> -1 '
+        query = query + f' select parent_id from code_hierarchy where id = {obj_id} and parent_id <> -1 '
         query = query + ' UNION ALL '
-        query = query + ' select h.parentId from code_hierarchy h , cte c where h.id = c.id and h.parentId <> -1 '
+        query = query + ' select h.parent_id from code_hierarchy h , cte c where h.id = c.id and h.parent_id <> -1 '
         query = query + ' ) '
         query = query + ' select distinct * from cte ;'
-        cursor = self.mysql.get_sql_cursor(query)
+        cursor = self.query_db.get_sql_cursor(query)
 
 
         for row in cursor.fetchall():
@@ -230,13 +229,13 @@ class QueryLOINC:
 
         query = ' WITH RECURSIVE cte (id,ct) AS '
         query = query + ' ( '
-        query = query + f' select parentId , 1 from code_hierarchy where id = {obj_id} and parentId <> -1 '
+        query = query + f' select parent_id , 1 from code_hierarchy where id = {obj_id} and parent_id <> -1 '
         query = query + ' UNION ALL '
-        query = query + ' select h.parentId , c.ct + 1 from code_hierarchy h , cte c '
-        query = query + f'       where h.id = c.id and h.parentId <> -1 and c.ct <= {level} '
+        query = query + ' select h.parent_id , c.ct + 1 from code_hierarchy h , cte c '
+        query = query + f'       where h.id = c.id and h.parent_id <> -1 and c.ct <= {level} '
         query = query + ' ) '
         query = query + ' select distinct id , ct from cte ; '
-        cursor = self.mysql.get_sql_cursor(query)
+        cursor = self.query_db.get_sql_cursor(query)
 
 
         for row in cursor.fetchall():
@@ -263,12 +262,12 @@ class QueryLOINC:
 
         query = " WITH RECURSIVE cte (id) AS "
         query = query + " ( "
-        query = query + f" select id from code_hierarchy where parentId = {obj_id} "
+        query = query + f" select id from code_hierarchy where parent_id = {obj_id} "
         query = query + " UNION ALL "
-        query = query + " select h.id from code_hierarchy h , cte c where h.parentId = c.id "
+        query = query + " select h.id from code_hierarchy h , cte c where h.parent_id = c.id "
         query = query + " ) "
         query = query + " select distinct * from cte ; "
-        cursor = self.mysql.get_sql_cursor( query)
+        cursor = self.query_db.get_sql_cursor( query)
 
         for row in cursor.fetchall():
             descendants.add(row[0])

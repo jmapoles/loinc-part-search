@@ -18,16 +18,16 @@ class TestMySQLQuery(unittest.TestCase):
 
         # mock the connection
         patcher = patch( "loinc_part_search.database_connection.db_queries.DBConnection" )
-        mock_mysql = patcher.start()
+        mock_connection = patcher.start()
         self.addCleanup ( patcher.stop )
 
         # mocked instance and the cursor
-        self.mysql = mock_mysql.return_value
-        self.cursor = self.mysql.get_sql_cursor.return_value
+        self.connection = mock_connection.return_value
+        self.cursor = self.connection.get_sql_cursor.return_value
 
-        # QueryMySQLLOINC
+        # QueryLOINC
         self.db_conn = QueryLOINC( "mysql" , "server" , "user" , "pass" , "db" )
-        self.db_conn.mysql = self.mysql
+        self.db_conn.query_db = self.connection
 
 
 
@@ -35,7 +35,7 @@ class TestMySQLQuery(unittest.TestCase):
 
     def test_get_obj_id_of_code_type( self ):
 
-        self.mysql.return_single_row.return_value = TestConstants.return_of_obj_id_query[0]
+        self.db_conn.query_db.return_single_row.return_value = TestConstants.return_of_obj_id_query[0]
 
         obj_id = self.db_conn.get_obj_id_of_code_type( "code definition", "10000-9" )
 
@@ -57,7 +57,7 @@ class TestMySQLQuery(unittest.TestCase):
 
     def test_get_defining_attributes_of_obj_id(self):
 
-        self.mysql.return_single_row.return_value = TestConstants.return_of_obj_id_query[0]
+        self.db_conn.query_db.return_single_row.return_value = TestConstants.return_of_obj_id_query[0]
 
         defining_attributes = self.db_conn.get_defining_attributes_of_obj_id ( 0 )
 
