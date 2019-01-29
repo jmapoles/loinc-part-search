@@ -1,5 +1,5 @@
 # loinc_part_search Overview
-This project builds LOINC codes into a hierarchy based on LOINC part codes.  Hierarchies are base on the multi-axial hierarchy table. This is a demonstration project.  Features will gradually be expanded.  Searching capabilities will be added using part code terms and the LOINC code definitions. Data is from LOINC 2.65. The database contains all data from the loinc.txt and multi-axial hierarchy table.<br>
+This project builds LOINC codes into a hierarchy based on LOINC part codes.  Hierarchies are base on the multi-axial hierarchy table. This is a demonstration project.  Features will gradually be expanded.  Data is from LOINC 2.65. The database contains all data from the loinc.txt and multi-axial hierarchy table.<br>
 The project is designed as a set of layers,
 * database containing loinc data stored in a object–attribute–value model design,
   * MySQL and Postgres databases are supported,

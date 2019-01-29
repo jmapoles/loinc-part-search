@@ -37,11 +37,7 @@ class AccessLOINCConnection:
         return self.db_conn.get_obj_id_of_code_type ( attribute_definition, code )
 
     def obj_id_exists(self, obj_id):
-
-        if self.db_conn.obj_id_exists ( obj_id ):
-            return True
-        return False
-
+        return self.db_conn.obj_id_exists ( obj_id )
 
     def get_attributes_of_obj_id(self , obj_id ):
         return self.db_conn.get_attributes_of_obj_id ( obj_id )

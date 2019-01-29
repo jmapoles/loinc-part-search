@@ -62,18 +62,18 @@ These classes should not be instantiated themselves, rather use AccessLOINC to q
     2. Set
 2. __init__(self, type , server, user_name, password, database)
     1. creates the query_db variable but does not make the connection.
-    2. connection is uses create_connection() to make mock testing easier
+    2. connection is made by create_connection() to make mock testing easier
 3. create_connection(self)
     1. connects to DBConnection 
 4. get_obj_id_of_code_type(self, attribute_definition , code)
-    1. return the id of the code
-    2. if it does not exist return None
+    1. returns the id of the code
+    2. if it does not exist returns None
     3. query
     ```
         select * 
           from codes 
-         where attribute_value = '{code}' 
-           and attribute_id = {attribute_definition}
+         where defining_value = '{code}' 
+           and defining_id = {attribute_definition}
      ```
 5. obj_id_exists(self, obj_id)
     1. returns true if this id exists in DB
@@ -127,7 +127,7 @@ These classes should not be instantiated themselves, rather use AccessLOINC to q
     ```
 11. get_ancestor_ids_of_obj_id_to_level(self, obj_id, level: int )
     1. returns ancestors of the id as a set
-    2. ancestors must be within a set number of step, the level variable, from the id
+    2. ancestors must be within a set number of steps, the level variable, from the id
     3. a recursive query 
     4. query
     ```

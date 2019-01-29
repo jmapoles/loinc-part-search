@@ -15,7 +15,7 @@ class EAVObject:
 
     # ------------------------------------------------
 
-    def __init__(self, obj_id=None , defining_definition=None , defining_value=None , attribute_definition=None , attribute_value=None  ):
+    def __init__(self, obj_id=None , defining_definition=None , defining_value=None , attribute_definition=None , attribute_value=None ):
         """
         Initialize the object.  Can be built without values including the object id.
 
@@ -203,6 +203,7 @@ class EAVObject:
         Empty the defining attribute tuple
         """
         self.defining_attribute = tuple()
+
 
 
     # ------------------------------------------------
