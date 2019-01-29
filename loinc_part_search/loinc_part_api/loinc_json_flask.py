@@ -4,12 +4,6 @@ import loinc_part_search.db_data as conn
 
 app = Flask( __name__ )
 
-# local postgres
-# access_loinc = conn.AccessLOINC( "postgres" , "localhost", "postgres", "<password>", "loinc_demo" )
-
-# local mysql
-access_loinc = conn.AccessLOINC( "postgres" , "localhost", "root", "<password>", "loinc_demo" )
-
 # heroku
 access_loinc = conn.AccessLOINC( "postgres" , \
                                  "ec2-54-225-227-125.compute-1.amazonaws.com", \
