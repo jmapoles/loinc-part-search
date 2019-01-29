@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="986ef1ee-3610-4de7-b162-cb7df408f17a" name="Default Changelist" comment="">
+    <list default="true" id="986ef1ee-3610-4de7-b162-cb7df408f17a" name="Default Changelist" comment="move version file&#10;add version to index page">
+      <change afterPath="$PROJECT_DIR$/doc/web_api.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VERSION.txt" beforeDir="false" afterPath="$PROJECT_DIR$/loinc_part_search/version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/loinc_part_search_overview.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/loinc_part_search_overview.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py" beforeDir="false" afterPath="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html" afterDir="false" />
     </list>
+    <ignored path="loinc_part_search/loinc_part_api/loinc_json_flask_local.py" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,23 +16,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask_local.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        <entry file="file://$PROJECT_DIR$/doc/loinc_part_search_overview.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="315">
+                <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -88,7 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../LOINCCodeSelection/LOINCCodeSelectionUnittests/live_tests.py" />
         <option value="$PROJECT_DIR$/../LOINCCodeSelection/LOINCCodeSelectionUnittests/test_access_loinc_eav_object.py" />
         <option value="$PROJECT_DIR$/../LOINCCodeSelection/LOINCCodeSelectionUnittests/test_loinc_json_flask.py" />
         <option value="$PROJECT_DIR$/../LOINCCodeSelection/Documents/db_design.md" />
@@ -127,7 +118,6 @@
         <option value="$PROJECT_DIR$/loinc_part_search/unittests/test_db_connection.py" />
         <option value="$PROJECT_DIR$/loinc_part_search/unittests/test_db_queries.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/doc/loinc_part_search_overview.md" />
         <option value="$PROJECT_DIR$/doc/db_design.md" />
         <option value="$PROJECT_DIR$/doc/db_connection_design.md" />
         <option value="$PROJECT_DIR$/loinc_part_search/db_data/access_loinc_connection.py" />
@@ -135,10 +125,12 @@
         <option value="$PROJECT_DIR$/loinc_part_search/loinc_objects/eav_objects.py" />
         <option value="$PROJECT_DIR$/doc/eav_object_design.md" />
         <option value="$PROJECT_DIR$/VERSION.txt" />
-        <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py" />
         <option value="$PROJECT_DIR$/loinc_part_search/version.py" />
         <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask_local.py" />
         <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html" />
+        <option value="$PROJECT_DIR$/doc/api.md" />
+        <option value="$PROJECT_DIR$/doc/loinc_part_search_overview.md" />
+        <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py" />
       </list>
     </option>
   </component>
@@ -161,24 +153,6 @@
               <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
               <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
-              <item name="loinc_part_search" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
-              <item name="loinc_part_search" type="462c0819:PsiDirectoryNode" />
-              <item name="loinc_part_api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
-              <item name="loinc_part_search" type="462c0819:PsiDirectoryNode" />
-              <item name="loinc_part_api" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -187,17 +161,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LOINCCodeSelection" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask_local.py" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search\loinc_part_api" />
+      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search" />
       <recent name="C:\Development\Projects\LOINCPartSearch\doc" />
+      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search\loinc_part_api" />
       <recent name="C:\Development\Projects\LOINCPartSearch" />
       <recent name="C:\Development\Projects\LOINCPartSearch\database_setup" />
-      <recent name="C:\Development\Projects\LOINCPartSearch\scripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search" />
@@ -403,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548792618519</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="move version file&#10;add version to index page">
+      <created>1548794966847</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1548794966847</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -444,10 +425,10 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.27759418" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.27759418" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.19830029" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3696884" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.063739374" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.562323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -486,33 +467,10 @@
     <MESSAGE value="add gunicorn and Procfile" />
     <MESSAGE value="Corrections to documentation.&#10;Change table names so the MySQL and Postgres are the same." />
     <MESSAGE value="Update documentation&#10;Adding version file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update documentation&#10;Adding version file" />
+    <MESSAGE value="move version file&#10;add version to index page" />
+    <option name="LAST_COMMIT_MESSAGE" value="move version file&#10;add version to index page" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../LOINCCodeSelection/LOINCDBConnection/access_loinc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LOINCCodeSelection/LOINCDBConnection/load_loinc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LOINCCodeSelection/LOINCCodeSelectionUnittests/live_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../LOINCCodeSelection/LOINCCodeSelectionUnittests/test_access_loinc_eav_object.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -765,19 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/db_erd.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/db_design.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loinc_part_search/database_connection/db_connection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1210">
@@ -852,16 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/loinc_part_search_overview.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="53">
-            <caret line="1" column="206" selection-start-line="1" selection-start-column="206" selection-end-line="1" selection-end-column="206" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_objects/eav_objects.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-380">
@@ -869,23 +804,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/eav_object_design.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="645">
-            <caret line="155" column="2" selection-start-line="155" selection-start-column="2" selection-end-line="155" selection-end-column="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py">
+    <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="18" selection-start-line="18" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="345">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -896,20 +818,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/doc/db_erd.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loinc_part_search/version">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/web_api.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/db_design.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="195">
+            <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/eav_object_design.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="503">
+            <caret line="155" column="2" selection-start-line="155" selection-start-column="2" selection-end-line="155" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/eav_object.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask_local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="345">
+          <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="60" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/loinc_part_search_overview.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="315">
+            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

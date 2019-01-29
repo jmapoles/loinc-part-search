@@ -16,15 +16,14 @@ access_loinc.make_connection()
 
 access = conn.AccessJSON( access_loinc )
 
-mypackage_root_dir = os.path.dirname(os.path.abspath(__file__))
+mypackage_root_dir = os.path.dirname( os.path.abspath(__package__) )
 with open(os.path.join( mypackage_root_dir , 'version.py')) as version_file:
     version = version_file.read().strip()
 
-print( version )
 
 @app.route( '/' )
 def index():
-    return render_template( "index.html" )
+    return render_template( "index.html" , version=version )
 
 
 @app.route( '/loinc/<code>' )
