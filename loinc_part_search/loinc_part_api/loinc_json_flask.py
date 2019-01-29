@@ -17,7 +17,7 @@ access_loinc.make_connection()
 access = conn.AccessJSON( access_loinc )
 
 mypackage_root_dir = os.path.dirname( os.path.abspath(__package__) )
-with open(os.path.join( mypackage_root_dir , 'version.py')) as version_file:
+with open(os.path.join( mypackage_root_dir , 'loinc_part_api/version.py')) as version_file:
     version = version_file.read().strip()
 
 
