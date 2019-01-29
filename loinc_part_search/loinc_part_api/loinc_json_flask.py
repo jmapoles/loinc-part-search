@@ -1,5 +1,6 @@
 from flask import Flask , render_template
 import loinc_part_search.db_data as conn
+import os
 
 
 app = Flask( __name__ )
@@ -15,6 +16,11 @@ access_loinc.make_connection()
 
 access = conn.AccessJSON( access_loinc )
 
+mypackage_root_dir = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join( mypackage_root_dir , 'version.py')) as version_file:
+    version = version_file.read().strip()
+
+print( version )
 
 @app.route( '/' )
 def index():

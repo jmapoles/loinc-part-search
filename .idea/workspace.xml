@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="986ef1ee-3610-4de7-b162-cb7df408f17a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/VERSION.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/access_loinc.png" beforeDir="false" afterPath="$PROJECT_DIR$/doc/access_loinc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/access_loinc_design.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/access_loinc_design.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/db_connection_design.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db_connection_design.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/db_design.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db_design.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/db_erd.png" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db_erd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/eav_object_design.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/eav_object_design.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/loinc_part_search_overview.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/loinc_part_search_overview.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loinc_part_search/db_data/access_loinc_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/loinc_part_search/db_data/access_loinc_connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loinc_part_search/loinc_objects/eav_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/loinc_part_search/loinc_objects/eav_objects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VERSION.txt" beforeDir="false" afterPath="$PROJECT_DIR$/loinc_part_search/version.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py" beforeDir="false" afterPath="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/get_loinc_json_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/get_loinc_json_heroku.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +14,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask_local.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -76,7 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../LOINCCodeSelection/LOINCDBConnection/load_loinc.py" />
         <option value="$PROJECT_DIR$/../LOINCCodeSelection/LOINCCodeSelectionUnittests/live_tests.py" />
         <option value="$PROJECT_DIR$/../LOINCCodeSelection/LOINCCodeSelectionUnittests/test_access_loinc_eav_object.py" />
         <option value="$PROJECT_DIR$/../LOINCCodeSelection/LOINCCodeSelectionUnittests/test_loinc_json_flask.py" />
@@ -109,7 +120,6 @@
         <option value="$PROJECT_DIR$/database_setup/descendants.sql" />
         <option value="$PROJECT_DIR$/scripts/get_loinc_json_example.py" />
         <option value="$PROJECT_DIR$/database_setup/HLA.sql" />
-        <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html" />
         <option value="$PROJECT_DIR$/loinc_part_search/database_connection/db_connection.py" />
         <option value="$PROJECT_DIR$/loinc_part_search/database_connection/db_queries.py" />
         <option value="$PROJECT_DIR$/loinc_part_search/unittests/test_mysql_queries.py" />
@@ -117,8 +127,6 @@
         <option value="$PROJECT_DIR$/loinc_part_search/unittests/test_db_connection.py" />
         <option value="$PROJECT_DIR$/loinc_part_search/unittests/test_db_queries.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py" />
-        <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask_local.py" />
         <option value="$PROJECT_DIR$/doc/loinc_part_search_overview.md" />
         <option value="$PROJECT_DIR$/doc/db_design.md" />
         <option value="$PROJECT_DIR$/doc/db_connection_design.md" />
@@ -127,6 +135,10 @@
         <option value="$PROJECT_DIR$/loinc_part_search/loinc_objects/eav_objects.py" />
         <option value="$PROJECT_DIR$/doc/eav_object_design.md" />
         <option value="$PROJECT_DIR$/VERSION.txt" />
+        <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py" />
+        <option value="$PROJECT_DIR$/loinc_part_search/version.py" />
+        <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask_local.py" />
+        <option value="$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html" />
       </list>
     </option>
   </component>
@@ -149,6 +161,24 @@
               <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
               <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
+              <item name="loinc_part_search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
+              <item name="loinc_part_search" type="462c0819:PsiDirectoryNode" />
+              <item name="loinc_part_api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LOINCPartSearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LOINCPartSearch" type="462c0819:PsiDirectoryNode" />
+              <item name="loinc_part_search" type="462c0819:PsiDirectoryNode" />
+              <item name="loinc_part_api" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -162,17 +192,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search\database_queries" />
-      <recent name="C:\Development\Projects\LOINCPartSearch\database_setup" />
-      <recent name="C:\Development\Projects\LOINCPartSearch" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search\loinc_part_api" />
       <recent name="C:\Development\Projects\LOINCPartSearch\doc" />
       <recent name="C:\Development\Projects\LOINCPartSearch" />
       <recent name="C:\Development\Projects\LOINCPartSearch\database_setup" />
       <recent name="C:\Development\Projects\LOINCPartSearch\scripts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search" />
+      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search\loinc_part_api" />
+      <recent name="C:\Development\Projects\LOINCPartSearch" />
+      <recent name="C:\Development\Projects\LOINCPartSearch\loinc_part_search\database_queries" />
+      <recent name="C:\Development\Projects\LOINCPartSearch\database_setup" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -357,7 +389,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548463272910</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update documentation&#10;Adding version file">
+      <created>1548792594884</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1548792594884</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update documentation&#10;Adding version file">
+      <created>1548792618519</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1548792618519</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -394,13 +440,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.27759418" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.27759418" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.19830029" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19688386" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3696884" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.562323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -438,7 +485,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add gunicorn and Procfile" />
     <MESSAGE value="Corrections to documentation.&#10;Change table names so the MySQL and Postgres are the same." />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrections to documentation.&#10;Change table names so the MySQL and Postgres are the same." />
+    <MESSAGE value="Update documentation&#10;Adding version file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update documentation&#10;Adding version file" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../LOINCCodeSelection/LOINCDBConnection/access_loinc.py">
@@ -605,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="25" column="96" selection-start-line="25" selection-start-column="96" selection-end-line="25" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database_setup/table_counts.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -704,29 +745,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/get_loinc_json_heroku.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="80" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask_local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -855,10 +879,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VERSION.txt">
+    <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="18" selection-start-line="18" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loinc_part_search/version.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/loinc_json_flask_local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loinc_part_search/loinc_part_api/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
         </state>
       </provider>
     </entry>
