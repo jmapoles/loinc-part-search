@@ -17,7 +17,7 @@ access_loinc.make_connection()
 ## AccessLOINC summary
 1. get_descendants_obj_of_id_as_map(self, obj_id):
 
-## AccessLOINCHiearchy summary
+## AccessLOINCHierarchy summary
 1. get_parent_obj_of_id(self, obj_id)
 2. get_child_obj_of_id(self, obj_id)
 3. get_ancestors_obj_of_id(self, obj_id)
@@ -46,12 +46,12 @@ access_loinc.make_connection()
 
 
 ## AccessLOINC in access_loinc
-1. imports EAVMap and extends AccessLOINCHiearchy
+1. imports EAVMap and extends AccessLOINCHierarchy
 2. get_descendants_obj_of_id_as_map(self, obj_id):
     1. Takes an object id.
     2. If the object id exists the method returns a map of the object and all descendants.
 
-## AccessLOINCHiearchy in access_loinc_hierarchy
+## AccessLOINCHierarchy in access_loinc_hierarchy
 1. extends AccessLOINCObj
 2. get_parent_obj_of_id(self, obj_id)
     1. Takes an object id.

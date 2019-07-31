@@ -7,7 +7,7 @@ from loinc_part_search.db_data.access_loinc_eav_object import AccessLOINCObj
 # --------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------
 
-class AccessLOINCHiearchy(AccessLOINCObj):
+class AccessLOINCHierarchy( AccessLOINCObj ):
 
     # --------------------------------------------------------
 
@@ -81,7 +81,7 @@ class AccessLOINCHiearchy(AccessLOINCObj):
             return ancestors
 
         if level == 1:
-            return [ self.get_parent_obj_of_id( obj_id ) ]
+            return self.get_parent_obj_of_id( obj_id )
 
         return self.add_obj_to_list( self.get_ancestor_ids_of_obj_id_to_level ( obj_id , level ) )
 

@@ -1,13 +1,13 @@
 # --------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------
 
-from loinc_part_search.db_data.access_loinc_hierarchy import AccessLOINCHiearchy
+from loinc_part_search.db_data.access_loinc_hierarchy import AccessLOINCHierarchy
 from loinc_part_search.loinc_objects.eav_objects import EAVMap
 
 # --------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------
 
-class AccessLOINC( AccessLOINCHiearchy ):
+class AccessLOINC( AccessLOINCHierarchy ):
 
     # --------------------------------------------------------
 

@@ -9,7 +9,7 @@ from loinc_part_search.db_data.access_json import AccessJSON
 # --------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------
 
-access_loinc = AccessLOINC ( "mysql" , "localhost", "root", "JANN1qwe1!", "loinc_264" )
+access_loinc = AccessLOINC ( "postgres" , "localhost", "postgres", "JANN1qwe1!", "USMedicalCodes" , 'loinc_265' )
 access_loinc.make_connection()
 
 access = AccessJSON( access_loinc )
@@ -94,20 +94,20 @@ def main():
     print( "\nGet children:")
     get_children_objects()
 
-    # print( "\nGet ancestors:")
-    # get_ancestor_objects()
-    #
-    # print( "\nGet ancestors to level:")
-    # get_ancestor_objects_to_level()
-    #
-    # print( "\nGet descendants:")
-    # get_descendant_objects()
-    #
-    # print( "\nGet descendants map:")
-    # get_descendant_map()
-    #
-    # print( "\nGet descendants:")
-    # get_json_descendants_of_loinc_code()
+    print( "\nGet ancestors:")
+    get_ancestor_objects()
+
+    print( "\nGet ancestors to level:")
+    get_ancestor_objects_to_level()
+
+    print( "\nGet descendants:")
+    get_descendant_objects()
+
+    print( "\nGet descendants map:")
+    get_descendant_map()
+
+    print( "\nGet descendants:")
+    get_json_descendants_of_loinc_code()
 
 
 # --------------------------------------------------------------------------------------------

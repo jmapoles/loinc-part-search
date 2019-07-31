@@ -6,19 +6,26 @@ import os
 app = Flask( __name__ )
 
 # heroku
-access_loinc = conn.AccessLOINC( "postgres" , \
-                                 "ec2-54-225-227-125.compute-1.amazonaws.com", \
-                                 "qcdvginxdwqnou", \
-                                 "0c065f21b52d1826a3beea594c4f78d4f3bf62ef98824dfe1687b29ffb56c18c", \
-                                 "dfh8skpjeee9sf" )
+# access_loinc = conn.AccessLOINC( "postgres" , \
+#                                  "ec2-54-225-227-125.compute-1.amazonaws.com", \
+#                                  "qcdvginxdwqnou", \
+#                                  "0c065f21b52d1826a3beea594c4f78d4f3bf62ef98824dfe1687b29ffb56c18c", \
+#                                  "dfh8skpjeee9sf" , 'loinc_265' )
+
+# local
+access_loinc = conn.AccessLOINC( "postgres" , "localhost", "postgres", "JANN1qwe1!", "USMedicalCodes" , 'loinc_265' )
 
 access_loinc.make_connection()
 
 access = conn.AccessJSON( access_loinc )
 
 mypackage_root_dir = os.path.dirname( os.path.abspath(__package__) )
-with open(os.path.join( mypackage_root_dir , 'loinc_part_search/version.py')) as version_file:
+with open(os.path.join( mypackage_root_dir , 'version_test.py' )) as version_file:
     version = version_file.read().strip()
+
+# testing
+# with open(os.path.join( mypackage_root_dir , 'version_test.py' )) as version_file:
+#     version = version_file.read().strip()
 
 
 @app.route( '/' )

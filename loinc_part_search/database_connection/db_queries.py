@@ -3,6 +3,9 @@
 
 from loinc_part_search.database_connection.db_connection import DBConnection
 from typing import Set
+from loinc_part_search.database_connection.data_sources import DataSources
+from loinc_part_search.database_connection.attribute_type_definitions import AttributeTypeDefinitions
+
 
 # --------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------
@@ -13,7 +16,7 @@ class QueryLOINC:
     """
     # --------------------------------------------------------
 
-    def __init__(self, type , server, user_name, password, database):
+    def __init__(self, type , server, user_name, password, database , schema ):
         """
         :param server:
         :param user_name:
@@ -29,6 +32,7 @@ class QueryLOINC:
         self.user_name = user_name
         self.password = password
         self.database = database
+        self.schema = schema
 
         self.query_db = None
 
@@ -36,8 +40,18 @@ class QueryLOINC:
         """
         connect to MySQLConnection
         """
-        self.query_db = DBConnection(self.type,self.server, self.user_name, self.password, self.database)
+        self.query_db = DBConnection(self.type,self.server, self.user_name, self.password, self.database )
 
+        self.data_sources:DataSources = DataSources()
+        self.data_sources.add_database_connection( self.query_db )
+
+        self.attribute_type_definitions:AttributeTypeDefinitions = AttributeTypeDefinitions()
+        self.attribute_type_definitions.add_database_connection( self.query_db )
+
+
+    def change_schema( self, schema ):
+
+        self.schema = schema
 
 
     # --------------------------------------------------------
@@ -53,7 +67,7 @@ class QueryLOINC:
 
 
         # get the codes table for the code
-        query = f" select * from codes where defining_value = '{code}' and " \
+        query = f" select * from {self.schema}.codes where defining_value = '{code}' and " \
                 f"   defining_id = {attribute_definition} "
 
         row = self.query_db.return_single_row( query )
@@ -75,7 +89,7 @@ class QueryLOINC:
 
 
         # get codes table for the obj_id
-        query = f" select * from codes where id = {obj_id} "
+        query = f" select * from {self.schema}.codes where id = {obj_id} "
 
         row = self.query_db.return_single_row( query )
 
@@ -96,7 +110,7 @@ class QueryLOINC:
 
 
         # get codes table for the obj_id
-        query = f" select * from codes where id = {obj_id} "
+        query = f" select * from {self.schema}.codes where id = {obj_id} "
 
         row = self.query_db.return_single_row ( query )
         if row is None:
@@ -114,7 +128,7 @@ class QueryLOINC:
         """
 
         # get the returns code_attributes table
-        query = f" select * from code_attributes where id = {obj_id} "
+        query = f" select * from {self.schema}.code_attributes where id = {obj_id} "
         cursor = self.query_db.get_sql_cursor(query)
 
         attributes = []
@@ -139,7 +153,7 @@ class QueryLOINC:
 
         parents = set()
 
-        query = f" select * from code_hierarchy where id = {obj_id} "
+        query = f" select * from {self.schema}.code_hierarchy where id = {obj_id} "
         cursor = self.query_db.get_sql_cursor(query)
 
         for row in cursor.fetchall():
@@ -160,7 +174,7 @@ class QueryLOINC:
 
         children = set()
 
-        query = f" select * from code_hierarchy where parent_id = {obj_id} "
+        query = f" select * from {self.schema}.code_hierarchy where parent_id = {obj_id} "
         cursor = self.query_db.get_sql_cursor(query)
 
         for row in cursor.fetchall():
@@ -187,9 +201,9 @@ class QueryLOINC:
 
         query = ' WITH RECURSIVE cte (id) AS '
         query = query + ' ( '
-        query = query + f' select parent_id from code_hierarchy where id = {obj_id} and parent_id <> -1 '
+        query = query + f' select parent_id from {self.schema}.code_hierarchy where id = {obj_id} and parent_id <> -1 '
         query = query + ' UNION ALL '
-        query = query + ' select h.parent_id from code_hierarchy h , cte c where h.id = c.id and h.parent_id <> -1 '
+        query = query + f' select h.parent_id from {self.schema}.code_hierarchy h , cte c where h.id = c.id and h.parent_id <> -1 '
         query = query + ' ) '
         query = query + ' select distinct * from cte ;'
         cursor = self.query_db.get_sql_cursor(query)
@@ -229,9 +243,9 @@ class QueryLOINC:
 
         query = ' WITH RECURSIVE cte (id,ct) AS '
         query = query + ' ( '
-        query = query + f' select parent_id , 1 from code_hierarchy where id = {obj_id} and parent_id <> -1 '
+        query = query + f' select parent_id , 1 from {self.schema}.code_hierarchy where id = {obj_id} and parent_id <> -1 '
         query = query + ' UNION ALL '
-        query = query + ' select h.parent_id , c.ct + 1 from code_hierarchy h , cte c '
+        query = query + f' select h.parent_id , c.ct + 1 from {self.schema}.code_hierarchy h , cte c '
         query = query + f'       where h.id = c.id and h.parent_id <> -1 and c.ct <= {level} '
         query = query + ' ) '
         query = query + ' select distinct id , ct from cte ; '
@@ -262,9 +276,9 @@ class QueryLOINC:
 
         query = " WITH RECURSIVE cte (id) AS "
         query = query + " ( "
-        query = query + f" select id from code_hierarchy where parent_id = {obj_id} "
+        query = query + f" select id from {self.schema}.code_hierarchy where parent_id = {obj_id} "
         query = query + " UNION ALL "
-        query = query + " select h.id from code_hierarchy h , cte c where h.parent_id = c.id "
+        query = query + f" select h.id from {self.schema}.code_hierarchy h , cte c where h.parent_id = c.id "
         query = query + " ) "
         query = query + " select distinct * from cte ; "
         cursor = self.query_db.get_sql_cursor( query)

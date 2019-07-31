@@ -4,6 +4,7 @@
 import pymysql
 import psycopg2
 
+
 # --------------------------------------------------------
 # --------------------------------------------------------
 
@@ -13,7 +14,8 @@ class DBConnection:
     Database connection
     """
 
-    def __init__(self, type , server, user_name, password, database):
+
+    def __init__(self, type , server, user_name, password, database ):
         """
         :param type: database connection type, mysql or postgres
         :param server:
@@ -24,7 +26,6 @@ class DBConnection:
         """
 
         self.type = type
-
         if type == 'mysql':
             self.conn = pymysql.connect( host=server , user=user_name , password=password, database=database )
         elif type == 'postgres':
@@ -55,6 +56,7 @@ class DBConnection:
         cursor.execute(sql_query)
         return cursor
 
+
     def execute_query(self, sql_insert ):
         """
         :param sql_insert:
@@ -67,11 +69,13 @@ class DBConnection:
         self.conn.commit()
         cursor.close()
 
+
     def commit(self):
         """
         wraps the commit method
         """
         self.conn.commit()
+
 
     def return_single_row(self, query ):
         """
@@ -88,6 +92,45 @@ class DBConnection:
         cursor.close()
 
         return row
+
+
+    # --------------------------------------------------------
+
+    def schema_exists(self, schema_name ):
+        """
+        :param schema_name:
+        """
+
+        query = f" select exists ( SELECT 1 FROM information_schema.schemata WHERE schema_name = '{schema_name}' ) "
+
+        row = self.return_single_row( query )
+
+        return row[0] == True
+
+
+    def table_exists(self, schema_name , table_name ):
+        """
+        :param schema_name:
+        :param table_name:
+
+        """
+
+        query = f" select exists ( SELECT 1 FROM information_schema.tables WHERE table_schema = '{schema_name}' AND table_name = '{table_name}' ) "
+
+        row = self.return_single_row( query )
+
+        return row[ 0 ] == True
+
+
+    # --------------------------------------------------------
+    # --------------------------------------------------------
+
+    def close_connection(self ):
+        """
+        close the connection
+        """
+
+        self.conn.close()
 
 
     # --------------------------------------------------------

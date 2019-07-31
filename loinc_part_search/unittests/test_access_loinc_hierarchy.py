@@ -3,7 +3,7 @@
 
 import unittest
 from unittest.mock import patch , MagicMock
-from loinc_part_search.db_data.access_loinc_hierarchy import AccessLOINCHiearchy
+from loinc_part_search.db_data.access_loinc_hierarchy import AccessLOINCHierarchy
 from loinc_part_search.unittests.test_constants import TestConstants
 
 
@@ -23,7 +23,7 @@ class TestAccessLOINCHiearchy(unittest.TestCase):
         # mocked instance
         self.db_conn = mock_db_conn.return_value
 
-        self.access_loinc = AccessLOINCHiearchy( "type" , "server", "user", "pass", "db" )
+        self.access_loinc = AccessLOINCHierarchy( "type" , "server", "user", "pass", "db" , "schema" )
         self.access_loinc.db_conn = self.db_conn
 
 
@@ -142,7 +142,7 @@ class TestAccessLOINCHiearchy(unittest.TestCase):
         self.access_loinc.obj_id_exists.return_value = True
 
         self.access_loinc.get_parent_obj_of_id = MagicMock()
-        self.access_loinc.get_parent_obj_of_id.return_value = TestConstants.part_1001
+        self.access_loinc.get_parent_obj_of_id.return_value = [ TestConstants.part_1001 ]
 
         self.access_loinc.add_obj_to_list = MagicMock()
         self.access_loinc.add_obj_to_list.return_value = \

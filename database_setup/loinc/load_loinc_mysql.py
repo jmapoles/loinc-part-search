@@ -58,6 +58,8 @@ class LoadLOINC(DBConnection):
                 if row[0] in self.codesToIdCache:
                     continue
 
+                print( row[0] , self.id )
+
                 save_loinc_code(self.id, row[0], load_cursor)
                 self.codesToIdCache[row[0]] = self.id
 
@@ -211,10 +213,15 @@ class LoadLOINC(DBConnection):
 
 def main():
     
-    loinc_path = "C:\Development\DataFiles\LOINC\LOINC_265\loinc.csv"
-    mah_path = "C:\Development\DataFiles\LOINC\LOINC_265\MultiAxialHierarchy.csv"
+    loinc_path = "C:\Development\DataFiles\LOINC\LOINC_264\loinc.csv"
+    mah_path = "C:\Development\DataFiles\LOINC\LOINC_264\MultiAxialHierarchy.csv"
+    source_path = "C:\Development\DataFiles\LOINC\LOINC_264\source.tx"
+    attributes_path = "C:\Development\DataFiles\LOINC\LOINC_264\attributes.tx"
 
-    loinc_connection = LoadLOINC( "postgres" , "localhost", "postgres", "JANN1qwe1!", "loinc_265")
+    loinc_connection = LoadLOINC( "postgres" , "localhost", "postgres", "JANN1qwe1!", "USMedicalCodes" )
+
+
+
     loinc_connection.load_loinc_table(loinc_path)
     loinc_connection.load_mah_table(mah_path)
     loinc_connection.load_hierarchy_table(mah_path)

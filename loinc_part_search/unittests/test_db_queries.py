@@ -26,7 +26,7 @@ class TestMySQLQuery(unittest.TestCase):
         self.cursor = self.connection.get_sql_cursor.return_value
 
         # QueryLOINC
-        self.db_conn = QueryLOINC( "mysql" , "server" , "user" , "pass" , "db" )
+        self.db_conn = QueryLOINC( "mysql" , "server" , "user" , "pass" , "db" , "schema" )
         self.db_conn.query_db = self.connection
 
 

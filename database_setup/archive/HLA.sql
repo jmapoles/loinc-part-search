@@ -2,7 +2,7 @@
 WITH RECURSIVE descendants( id )
 	AS
 	(
-	select id from code_hierarchy where parentid = 11391105692
+	select id from code_hierarchy where parent id = 110569
   	union all
     select c.id from code_hierarchy c , descendants d where c.parentid = d.id
 	)

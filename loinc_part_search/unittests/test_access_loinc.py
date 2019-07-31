@@ -23,7 +23,7 @@ class TestAccessLOINC(unittest.TestCase):
         # mocked instance
         self.db_conn = mock_db_conn.return_value
 
-        self.access_loinc = AccessLOINC( "type" , "server", "user", "pass", "db" )
+        self.access_loinc = AccessLOINC( "type" , "server", "user", "pass", "db" , "schema" )
         self.access_loinc.db_conn = self.db_conn
 
 

@@ -17,7 +17,7 @@ class TestAccessJSON(unittest.TestCase):
 
     def setUp(self):
 
-        patcher = patch( "loinc_part_search.db_data.access_json.AccessJSON" )
+        patcher = patch( "loinc_part_search.db_data.access_json.AccessLOINC" )
         self.access_loinc = patcher.start()
         self.addCleanup ( patcher.stop )
 
@@ -28,8 +28,8 @@ class TestAccessJSON(unittest.TestCase):
 
     def check_eav_dictionary(self, eav_dict):
 
-        self.assertEqual ( eav_dict['defining definition'], 'LOINC part code' )
-        self.assertEqual ( eav_dict['LOINC part code'], '1003' )
+        self.assertEqual ( eav_dict['defining definition'], 'LOINC Part Code' )
+        self.assertEqual ( eav_dict['LOINC Part Code'], '1003' )
         self.assertEqual ( eav_dict['preferred attribute'], 'Name' )
         self.assertEqual ( eav_dict['Name'], 'LP-1003' )
 

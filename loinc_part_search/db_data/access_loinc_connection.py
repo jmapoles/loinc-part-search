@@ -2,6 +2,8 @@
 # --------------------------------------------------------------------------------------------
 
 from loinc_part_search.database_connection.db_queries import QueryLOINC
+from loinc_part_search.database_connection.data_sources import DataSources
+from loinc_part_search.database_connection.attribute_type_definitions import AttributeTypeDefinitions
 
 
 # --------------------------------------------------------------------------------------------
@@ -15,20 +17,25 @@ class AccessLOINCConnection:
 
     # --------------------------------------------------------
 
-    def __init__(self, type , server, user_name, password, database):
+    def __init__(self, type , server, user_name, password, database , schema ):
 
         self.type = type
         self.server = server
         self.user_name = user_name
         self.password = password
         self.database = database
+        self.schema = schema
 
         self.db_conn = None
 
+
     def make_connection(self):
 
-        self.db_conn = QueryLOINC( self.type , self.server , self.user_name , self.password , self.database )
+        self.db_conn = QueryLOINC( self.type , self.server , self.user_name , self.password , self.database , self.schema )
         self.db_conn.create_connection()
+
+        self.data_sources: DataSources = self.db_conn.data_sources
+        self.attribute_type_definitions : AttributeTypeDefinitions = self.db_conn.attribute_type_definitions
 
 
     # --------------------------------------------------------
@@ -59,6 +66,9 @@ class AccessLOINCConnection:
 
     def get_descendant_ids_of_id(self, obj_id):
         return self.db_conn.get_descendant_ids_of_id( obj_id )
+
+    def change_schema( self, schema ):
+        self.db_conn.change_schema( schema )
 
 
     # --------------------------------------------------------

@@ -8,7 +8,7 @@ drop table cytology_attributes;
 WITH RECURSIVE descendants( id )
 	AS 
 	( 
-	select id from code_hierarchy where parentid = 113942
+	select id from code_hierarchy where parent id = 113942
   	union all
     select c.id from code_hierarchy c , descendants d where c.parentid = d.id 
 	)

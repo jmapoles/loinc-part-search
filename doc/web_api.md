@@ -19,26 +19,25 @@ Example usage: https://loinc-part-search-demo.herokuapp.com/loinc/72323-9<br>
 Example result:
 ```json
 {
-    defining definition: "LOINC code",
-    LOINC code: "72323-9",
-    preferred attribute: "Name",
-    Name: "HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Flow cytometry (FC)",
-    Short name: "HLA-DP+DQ+DR IgG Ser Ql FC",
-    Common rank: "0",
-    Class type: "1",
-    Status: "ACTIVE",
-    Class: "HLA",
-    Method type: "Flow cytometry",
-    Scale type: "Ord",
-    System: "Ser",
-    Time aspect: "Pt",
-    Property: "PrThr",
-    Component: "HLA-DP+DQ+DR Ab.IgG",
-    parents: [
-    "LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"
-    ],
-    children: [ ]
+	"defining definition": "LOINC code",
+	"LOINC code": "72323-9",
+	"preferred attribute": "Name",
+	"Name": "HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Flow cytometry (FC)",
+	"Short name": "HLA-DP+DQ+DR IgG Ser Ql FC",
+	"Common rank": "0",
+	"Class type": "1",
+	"Status": "ACTIVE",
+	"Class": "HLA",
+	"Method type": "Flow cytometry",
+	"Scale type": "Ord",
+	"System": "Ser",
+	"Time aspect": "Pt",
+	"Property": "PrThr",
+	"Component": "HLA-DP+DQ+DR Ab.IgG",
+	"parents": ["LOINC part code: LP97384-9 , HLA-DP+DQ+DR | Bld-Ser-Plas"],
+	"children": []
 }
+
 ```
 
 
@@ -48,20 +47,16 @@ Example usage: https://loinc-part-search-demo.herokuapp.com/loinc/parents/72323-
 Example result:<br>
 ```json
 [
-    {
-        defining definition: "LOINC part code",
-        LOINC part code: "LP97384-9",
-        preferred attribute: "Name",
-        Name: "HLA-DP+DQ+DR | Bld-Ser-Plas",
-        parents: [
-        "LOINC part code: LP56928-2, HLA-DP+DQ+DR"
-        ],
-        children: [
-        "LOINC code: 72321-3, HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Immunoassay",
-        "LOINC code: 46995-7, HLA-DP+DQ+DR (class II) Ab in Serum",
-        "LOINC code: 72323-9, HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Flow cytometry (FC)"
-        ]
-    }
+	{"defining definition": "LOINC part code",
+	"LOINC part code": "LP97384-9",
+	"preferred attribute": "Name",
+	"Name": "HLA-DP+DQ+DR | Bld-Ser-Plas",
+	"parents": ["LOINC part code: LP56928-2, HLA-DP+DQ+DR"],
+	"children": 
+		["LOINC code: 72321-3, HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Immunoassay",
+		"LOINC code: 46995-7, HLA-DP+DQ+DR (class II) Ab in Serum",
+		"LOINC code: 72323-9, HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Flow cytometry (FC)"]
+	}
 ]
 ```
 
@@ -72,69 +67,62 @@ Example usage: https://loinc-part-search-demo.herokuapp.com/loinc/siblings/72323
 Example result:<br>
 ```json
 [
-    {
-        defining definition: "LOINC code",
-        LOINC code: "72323-9",
-        preferred attribute: "Name",
-        Name: "HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Flow cytometry (FC)",
-        Short name: "HLA-DP+DQ+DR IgG Ser Ql FC",
-        Common rank: "0",
-        Class type: "1",
-        Status: "ACTIVE",
-        Class: "HLA",
-        Method type: "Flow cytometry",
-        Scale type: "Ord",
-        System: "Ser",
-        Time aspect: "Pt",
-        Property: "PrThr",
-        Component: "HLA-DP+DQ+DR Ab.IgG",
-        parents: [
-        "LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"
-        ],
-        children: [ ]
-    },
-    {
-        defining definition: "LOINC code",
-        LOINC code: "72321-3",
-        preferred attribute: "Name",
-        Name: "HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Immunoassay",
-        Short name: "HLA-DP+DQ+DR IgG Ser Ql IA",
-        Common rank: "0",
-        Class type: "1",
-        Status: "ACTIVE",
-        Class: "HLA",
-        Method type: "IA",
-        Scale type: "Ord",
-        System: "Ser",
-        Time aspect: "Pt",
-        Property: "PrThr",
-        Component: "HLA-DP+DQ+DR Ab.IgG",
-        parents: [
-        "LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"
-        ],
-        children: [ ]
-    },
-    {
-        defining definition: "LOINC code",
-        LOINC code: "46995-7",
-        preferred attribute: "Name",
-        Name: "HLA-DP+DQ+DR (class II) Ab in Serum",
-        Short name: "HLA-DP+DQ+DR Ab NFr Ser",
-        Common rank: "0",
-        Class type: "1",
-        Status: "ACTIVE",
-        Class: "HLA",
-        Method type: "",
-        Scale type: "Qn",
-        System: "Ser",
-        Time aspect: "Pt",
-        Property: "NFr",
-        Component: "HLA-DP+DQ+DR Ab",
-        parents: [
-        "LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"
-        ],
-        children: [ ]
-    }
+	{"defining definition": "LOINC code",
+	"LOINC code": "72323-9",
+	"preferred attribute": "Name",
+	"Name": "HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Flow cytometry (FC)",
+	"Short name": "HLA-DP+DQ+DR IgG Ser Ql FC",
+	"Common rank": "0",
+	"Class type": "1",
+	"Status": "ACTIVE",
+	"Class": "HLA",
+	"Method type": "Flow cytometry",
+	"Scale type": "Ord",
+	"System": "Ser",
+	"Time aspect": "Pt",
+	"Property": "PrThr",
+	"Component": "HLA-DP+DQ+DR Ab.IgG",
+	"parents": ["LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"],
+	"children": []
+	},
+	
+	{"defining definition": "LOINC code",
+	"LOINC code": "72321-3",
+	"preferred attribute": "Name",
+	"Name": "HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Immunoassay",
+	"Short name": "HLA-DP+DQ+DR IgG Ser Ql IA",
+	"Common rank": "0",
+	"Class type": "1",
+	"Status": "ACTIVE",
+	"Class": "HLA",
+	"Method type": "IA",
+	"Scale type": "Ord",
+	"System": "Ser",
+	"Time aspect": "Pt",
+	"Property": "PrThr",
+	"Component": "HLA-DP+DQ+DR Ab.IgG",
+	"parents": ["LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"],
+	"children": []
+	},
+	
+	{"defining definition": "LOINC code",
+	"LOINC code": "46995-7",
+	"preferred attribute": "Name",
+	"Name": "HLA-DP+DQ+DR (class II) Ab in Serum",
+	"Short name": "HLA-DP+DQ+DR Ab NFr Ser",
+	"Common rank": "0",
+	"Class type": "1",
+	"Status": "ACTIVE",
+	"Class": "HLA",
+	"Method type": "",
+	"Scale type": "Qn",
+	"System": "Ser",
+	"Time aspect": "Pt",
+	"Property": "NFr",
+	"Component": "HLA-DP+DQ+DR Ab",
+	"parents": ["LOINC part code: LP97384-9 , HLA-DP+DQ+DR | Bld-Ser-Plas"],
+	"children": []
+	}
 ]
 ```
 
@@ -147,93 +135,87 @@ Example usage: https://loinc-part-search-demo.herokuapp.com/loinc/cousins/72323-
 Example result:<br>
 ```json
 [
-    {
-        defining definition: "LOINC code",
-        LOINC code: "50019-9",
-        preferred attribute: "Name",
-        Name: "HLA-DP+DQ+DR (class II) [Type]",
-        Short name: "HLA-DP+DQ+DR",
-        Common rank: "0",
-        Class type: "1",
-        Status: "ACTIVE",
-        Class: "HLA",
-        Method type: "",
-        Scale type: "Nom",
-        System: "Bld/Tiss",
-        Time aspect: "Pt",
-        Property: "Type",
-        Component: "HLA-DP+DQ+DR",
-        parents: [
-        "LOINC part code: LP187542-8, HLA-DP+DQ+DR | Blood or Tissue"
-        ],
-        children: [ ]
-    },
-    {
-        defining definition: "LOINC code",
-        LOINC code: "72323-9",
-        preferred attribute: "Name",
-        Name: "HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Flow cytometry (FC)",
-        Short name: "HLA-DP+DQ+DR IgG Ser Ql FC",
-        Common rank: "0",
-        Class type: "1",
-        Status: "ACTIVE",
-        Class: "HLA",
-        Method type: "Flow cytometry",
-        Scale type: "Ord",
-        System: "Ser",
-        Time aspect: "Pt",
-        Property: "PrThr",
-        Component: "HLA-DP+DQ+DR Ab.IgG",
-        parents: [
-        "LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"
-        ],
-        children: [ ]
-    },
-    {
-        defining definition: "LOINC code",
-        LOINC code: "72321-3",
-        preferred attribute: "Name",
-        Name: "HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Immunoassay",
-        Short name: "HLA-DP+DQ+DR IgG Ser Ql IA",
-        Common rank: "0",
-        Class type: "1",
-        Status: "ACTIVE",
-        Class: "HLA",
-        Method type: "IA",
-        Scale type: "Ord",
-        System: "Ser",
-        Time aspect: "Pt",
-        Property: "PrThr",
-        Component: "HLA-DP+DQ+DR Ab.IgG",
-        parents: [
-        "LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"
-        ],
-        children: [ ]
-    },
-    {
-        defining definition: "LOINC code",
-        LOINC code: "46995-7",
-        preferred attribute: "Name",
-        Name: "HLA-DP+DQ+DR (class II) Ab in Serum",
-        Short name: "HLA-DP+DQ+DR Ab NFr Ser",
-        Common rank: "0",
-        Class type: "1",
-        Status: "ACTIVE",
-        Class: "HLA",
-        Method type: "",
-        Scale type: "Qn",
-        System: "Ser",
-        Time aspect: "Pt",
-        Property: "NFr",
-        Component: "HLA-DP+DQ+DR Ab",
-        parents: [
-        "LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"
-        ],
-        children: [ ]
-    }
+	{"defining definition": "LOINC code",
+	"LOINC code": "50019-9",
+	"preferred attribute": "Name",
+	"Name": "HLA-DP+DQ+DR (class II) [Type]",
+	"Short name": "HLA-DP+DQ+DR",
+	"Common rank": "0",
+	"Class type": "1",
+	"Status": "ACTIVE",
+	"Class": "HLA",
+	"Method type": "",
+	"Scale type": "Nom",
+	"System": "Bld/Tiss",
+	"Time aspect": "Pt",
+	"Property": "Type",
+	"Component": "HLA-DP+DQ+DR",
+	"parents": ["LOINC part code: LP187542-8, HLA-DP+DQ+DR | Blood or Tissue"],
+	"children": []
+	},
+		
+	
+	{"defining definition": "LOINC code",
+	"LOINC code": "72323-9",
+	"preferred attribute": "Name",
+	"Name": "HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Flow cytometry (FC)",
+	"Short name": "HLA-DP+DQ+DR IgG Ser Ql FC",
+	"Common rank": "0",
+	"Class type": "1",
+	"Status": "ACTIVE",
+	"Class": "HLA",
+	"Method type": "Flow cytometry",
+	"Scale type": "Ord",
+	"System": "Ser",
+	"Time aspect": "Pt",
+	"Property": "PrThr",
+	"Component": "HLA-DP+DQ+DR Ab.IgG",
+	"parents": ["LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"],
+	"children": []
+	},
+		
+	
+	{"defining definition": "LOINC code",
+	"LOINC code": "72321-3",
+	"preferred attribute": "Name",
+	"Name": "HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Immunoassay",
+	"Short name": "HLA-DP+DQ+DR IgG Ser Ql IA",
+	"Common rank": "0",
+	"Class type": "1",
+	"Status": "ACTIVE",
+	"Class": "HLA",
+	"Method type": "IA",
+	"Scale type": "Ord",
+	"System": "Ser",
+	"Time aspect": "Pt",
+	"Property": "PrThr",
+	"Component": "HLA-DP+DQ+DR Ab.IgG",
+	"parents": ["LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"],
+	"children": []
+	},
+		
+	
+	{"defining definition": "LOINC code",
+	"LOINC code": "46995-7",
+	"preferred attribute": "Name",
+	"Name": "HLA-DP+DQ+DR (class II) Ab in Serum",
+	"Short name": "HLA-DP+DQ+DR Ab NFr Ser",
+	"Common rank": "0",
+	"Class type": "1",
+	"Status": "ACTIVE",
+	"Class": "HLA",
+	"Method type": "",
+	"Scale type": "Qn",
+	"System": "Ser",
+	"Time aspect": "Pt",
+	"Property": "NFr",
+	"Component": "HLA-DP+DQ+DR Ab",
+	"parents": ["LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"],
+	"children": []
+	}
+
 ]
 ```
-
 
 
 ### GET: loinc/parts/&lt;code&gt;
@@ -241,20 +223,20 @@ Returns a json object with the description of this part code.  Attributes are as
 Example usage: https://loinc-part-search-demo.herokuapp.com/loinc/parts/LP97384-9<br>
 Example result:<br>
 ```json
-{
-    defining definition: "LOINC part code",
-    LOINC part code: "LP97384-9",
-    preferred attribute: "Name",
-    Name: "HLA-DP+DQ+DR | Bld-Ser-Plas",
-    parents: [
-      "LOINC part code: LP56928-2, HLA-DP+DQ+DR"
-    ],
-    children: [
-        "LOINC code: 72321-3, HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Immunoassay",
-        "LOINC code: 46995-7, HLA-DP+DQ+DR (class II) Ab in Serum",
-        "LOINC code: 72323-9, HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Flow cytometry (FC)"
-        ]
-}
+[
+	{"defining definition": "LOINC part code",
+	"LOINC part code": "LP56928-2",
+	"preferred attribute": "Name",
+	"Name": "HLA-DP+DQ+DR",
+	"parents": ["LOINC part code: LP32739-2, Human Leukocyte Antigens"],
+	"children": [
+		"LOINC part code: LP187542-8, HLA-DP+DQ+DR | Blood or Tissue",
+		"LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"
+		]
+	}
+]
+
+
 ```
 
 
@@ -265,19 +247,16 @@ Example usage: https://loinc-part-search-demo.herokuapp.com/loinc/parts/parents/
 Example result:<br>
 ```json
 [
-    {
-        defining definition: "LOINC part code",
-        LOINC part code: "LP56928-2",
-        preferred attribute: "Name",
-        Name: "HLA-DP+DQ+DR",
-        parents: [
-        "LOINC part code: LP32739-2, Human Leukocyte Antigens"
-        ],
-        children: [
-        "LOINC part code: LP187542-8, HLA-DP+DQ+DR | Blood or Tissue",
-        "LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"
-        ]
-    }
+	{"defining definition": "LOINC part code",
+	"LOINC part code": "LP56928-2",
+	"preferred attribute": "Name",
+	"Name": "HLA-DP+DQ+DR",
+	"parents": ["LOINC part code: LP32739-2, Human Leukocyte Antigens"],
+	"children": [
+		"LOINC part code: LP187542-8, HLA-DP+DQ+DR | Blood or Tissue",
+		"LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas"
+		]
+	}
 ]
 ```
 
@@ -289,20 +268,25 @@ Example usage: https://loinc-part-search-demo.herokuapp.com/loinc/parts/descenda
 Example result:<br>
 ```json
 {
-    LOINC part code: LP56928-2, HLA-DP+DQ+DR: [
-        {
-            LOINC part code: LP187542-8, HLA-DP+DQ+DR | Blood or Tissue: [
-                  "LOINC code: 50019-9, HLA-DP+DQ+DR (class II) [Type]"
-            ]
-        },
-        {
-            LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas: [
-                "LOINC code: 72321-3, HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Immunoassay",
-                "LOINC code: 46995-7, HLA-DP+DQ+DR (class II) Ab in Serum",
-                "LOINC code: 72323-9, HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Flow cytometry (FC)"
-            ]
-        }
-    ]
+	"LOINC part code: LP56928-2, HLA-DP+DQ+DR": [
+		
+		{ 
+			"LOINC part code: LP187542-8, HLA-DP+DQ+DR | Blood or Tissue": 
+			
+				[ "LOINC code: 50019-9, HLA-DP+DQ+DR (class II) [Type]" ]
+			
+		}, 
+		{
+		
+			"LOINC part code: LP97384-9, HLA-DP+DQ+DR | Bld-Ser-Plas": [
+			
+				"LOINC code: 72321-3, HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Immunoassay", 
+				"LOINC code: 46995-7, HLA-DP+DQ+DR (class II) Ab in Serum", 
+				"LOINC code: 72323-9, HLA-DP+DQ+DR (class II) IgG Ab [Presence] in Serum by Flow cytometry (FC)"
+			]
+		}
+	]
 }
+
 ```
 

@@ -3,7 +3,7 @@
 
 from loinc_part_search.loinc_objects.eav_objects import EAVObject
 from loinc_part_search.db_data.access_loinc import AccessLOINC
-from loinc_part_search.loinc_objects.loinc_eav_constants import LOINCEAVConstants
+from loinc_part_search.database_connection.attribute_type_definition import AttributeTypeDefinition
 import json
 
 
@@ -16,11 +16,22 @@ class AccessJSON:
     EAV objects returned as json
     """
 
+    loinc_code_name = 'LOINC Code'
+    loinc_part_code_name = 'LOINC Part Code'
+
     # --------------------------------------------------------
 
     def __init__(self,access:AccessLOINC):
 
         self.access = access
+
+        loinc_code_definition : AttributeTypeDefinition = \
+            self.access.attribute_type_definitions.get_attribute_type_using_name( AccessJSON.loinc_code_name )
+        self.loinc_code_definition_id = loinc_code_definition.get_attribute_id()
+
+        loinc_part_code_definition : AttributeTypeDefinition = \
+            self.access.attribute_type_definitions.get_attribute_type_using_name( AccessJSON.loinc_part_code_name )
+        self.loinc_part_code_definition_id = loinc_part_code_definition.get_attribute_id()
 
 
     # --------------------------------------------------------
@@ -135,7 +146,7 @@ class AccessJSON:
 
     def get_json_parents_of_loinc_code(self , loinc_code ):
 
-        obj_id = self.access.get_obj_id_of_code_type( LOINCEAVConstants.loinc_code_definition , loinc_code )
+        obj_id = self.access.get_obj_id_of_code_type( self.loinc_code_definition_id , loinc_code )
         if obj_id is None:
             return json.dumps ( {} )
 
@@ -144,7 +155,7 @@ class AccessJSON:
 
     def get_json_parents_of_loinc_part_code(self, loinc_part_code):
 
-        obj_id = self.access.get_obj_id_of_code_type( LOINCEAVConstants.loinc_part_definition , loinc_part_code )
+        obj_id = self.access.get_obj_id_of_code_type( self.loinc_part_code_definition_id , loinc_part_code )
         if obj_id is None:
             return json.dumps ( {} )
 
@@ -168,7 +179,7 @@ class AccessJSON:
 
     def get_json_descendant_of_loinc_part_code(self , loinc_part_code ):
 
-        part_id = self.access.get_obj_id_of_code_type( LOINCEAVConstants.loinc_part_definition , loinc_part_code )
+        part_id = self.access.get_obj_id_of_code_type( self.loinc_part_code_definition_id , loinc_part_code )
         if part_id is None:
             return json.dumps ( {} )
 
@@ -216,7 +227,7 @@ class AccessJSON:
 
     def get_json_siblings_of_loinc_code(self , loinc_code ):
 
-        obj_id = self.access.get_obj_id_of_code_type( LOINCEAVConstants.loinc_code_definition , loinc_code )
+        obj_id = self.access.get_obj_id_of_code_type( self.loinc_code_definition_id , loinc_code )
         if obj_id is None:
             return json.dumps ( {} )
 
@@ -247,7 +258,7 @@ class AccessJSON:
 
     def get_json_cousins_of_loinc_code(self , loinc_code ):
 
-        obj_id = self.access.get_obj_id_of_code_type( LOINCEAVConstants.loinc_code_definition , loinc_code )
+        obj_id = self.access.get_obj_id_of_code_type( self.loinc_code_definition_id , loinc_code )
         if obj_id is None:
             return json.dumps ( {} )
 
@@ -262,11 +273,6 @@ class AccessJSON:
 
             descendants = descendants | self.access.get_descendant_ids_of_id( ancestor_id )
 
-
-        # loinc_code_str is "LOINC Code"
-        loinc_code_str = LOINCEAVConstants.constant_names[ LOINCEAVConstants.loinc_code_definition ]
-
-
         # get json for loinc descendants
         cousins = list()
         for loinc_child_id in descendants:
@@ -274,7 +280,7 @@ class AccessJSON:
             loinc_eav_obj = self.access.get_eav_obj_of_id( loinc_child_id )
             defining_attribute = loinc_eav_obj.get_defining_attribute()[0]
 
-            if defining_attribute == loinc_code_str:
+            if defining_attribute == AccessJSON.loinc_code_name:
                 cousins.append( self.get_dictionary_of_eav_obj( loinc_eav_obj ))
 
         return json.dumps( cousins )
