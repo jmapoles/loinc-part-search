@@ -13,7 +13,7 @@ Part of LOINC 2.65 has been configured as a demonstration project.  The database
 
 See https://loinc.org/license/ for Regenstrief license for the use and distribution of LOINC.<br><br>
 
-Version=1.0.0<br>
+Version=1.1.0<br>
 
 
 # Documentation
